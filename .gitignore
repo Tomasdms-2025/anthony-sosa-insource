@@ -1,0 +1,24 @@
+# Build / deps
+node_modules/
+.venv/
+.next/
+dist/
+build/
+__pycache__/
+*.pyc
+
+# Env / secrets
+.env
+.env.local
+*.key
+*.pem
+
+# Tooling
+.claude/
+.DS_Store
+
+# Externalized outputs (live in ~/tomOS/_outputs/<project>/, symlinked here)
+/outputs
+
+# in-repo regenerable text/HTML outputs (see conventions.md → Outputs)
+artifacts/
