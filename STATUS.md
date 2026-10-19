@@ -7,11 +7,13 @@ status: active
 
 ## Where we are
 - Site recovered from the live Vercel URL on 2026-10-19 (original repo lost). All 17 files pulled; local copy verified identical to live.
-- Local git repo only. No GitHub remote yet. Not deployed anywhere new yet.
+- Private GitHub repo: https://github.com/Tomasdms-2025/anthony-sosa-insource
+- Live on Cloudflare Pages: https://anthony-sosa-insource.pages.dev (manual deploy, see README). All 18 files verified identical to the original.
+- Old Vercel deployment still running, untouched.
 
 ## What's next
-- [ ] Decide: create private GitHub remote (`Tomasdms-2025/anthony-sosa-insource`)?
-- [ ] Decide: deploy target (Cloudflare Pages) and the real domain.
+- [ ] Decide the real domain and attach it to the Pages project.
+- [ ] Decide whether to delete the old Vercel deployment.
 - [ ] On launch: fill `YOUR-DOMAIN` in `site/sitemap.xml`, add `Sitemap:` to `site/robots.txt`, make `og:image` absolute.
 
 ## How to run

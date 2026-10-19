@@ -31,8 +31,18 @@ Then open http://localhost:8411.
 
 ## Deploy (Cloudflare Pages)
 
-No build step. Framework preset: **None**, build command: *(empty)*, output directory: **`site`**.
-Or direct upload: `npx wrangler pages deploy site --project-name <name>`.
+Live at **https://anthony-sosa-insource.pages.dev** (Cloudflare Pages project `anthony-sosa-insource`,
+account `3e19fbbe083102d5535bf5c47b9b242f`). Deploys are **manual direct uploads**, not git-connected,
+so a push to GitHub does NOT redeploy. To publish changes:
+
+```bash
+set -a; . ~/.claude/cloudflare.env; set +a
+CLOUDFLARE_API_TOKEN=$CF_API_TOKEN CLOUDFLARE_ACCOUNT_ID=3e19fbbe083102d5535bf5c47b9b242f \
+  npx -y wrangler@4.112.0 pages deploy site --project-name anthony-sosa-insource --branch main
+```
+
+Pages serves `404.html` for missing paths and redirects `/privacy.html` to `/privacy` (both work).
+The old Vercel deployment is still up and was not touched.
 
 Before launch on a real domain, replace `YOUR-DOMAIN` in `site/sitemap.xml` and add the
 `Sitemap:` line to `site/robots.txt` (both files carry a note saying so). The `og:image`
